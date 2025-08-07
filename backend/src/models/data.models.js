@@ -1,5 +1,4 @@
-const mongoose = require("mongoose")
-
+import mongoose from "mongoose"
 const dataSchema = new mongoose.Schema({
 	title: String,
 	description: String,
@@ -9,4 +8,5 @@ const dataSchema = new mongoose.Schema({
 	imageUrl: String,
 })
 
-module.exports = mongoose.model("data", dataSchema)
+const dataModel = mongoose.model("data", dataSchema)
+export default dataModel

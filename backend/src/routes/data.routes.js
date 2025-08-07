@@ -1,28 +1,29 @@
-const express = require("express")
-const multer = require("multer")
-const imagekit = require("../services/imagekit")
-
-const Data = require("../models/data.models")
+// routes/upload.route.js
+import express from "express"
+import multer from "multer"
+import imagekit from "../services/imagekit.js"
+import Data from "../models/data.models.js"
 
 const router = express.Router()
 const upload = multer({ storage: multer.memoryStorage() })
 
 router.post("/upload", upload.single("image"), async (req, res) => {
 	try {
-		// destructure data from req.body
-
 		const { title, price, description, category, location } = req.body
 		const file = req.file
-		// console.log(file)
-		if(!file) res.status(400).json({ message: "No file uploaded" })
-		// upload image to imagekit
+
+		if (!file) {
+			return res.status(400).json({ message: "No file uploaded" })
+		}
+
+		// Upload to ImageKit
 		const uploadImage = await imagekit.upload({
 			file: file.buffer,
 			fileName: file.originalname,
 			folder: "sarva",
 		})
 
-		// save to data as string to mongo db
+		// Save to MongoDB
 		const newData = await Data.create({
 			title,
 			description,
@@ -31,11 +32,15 @@ router.post("/upload", upload.single("image"), async (req, res) => {
 			imageUrl: uploadImage.url,
 			price,
 		})
+
 		res.status(201).json({ message: "success", data: newData })
 	} catch (error) {
 		console.error(error)
-		res.status(500).json({ "something went wrong": error.message })
+		res.status(500).json({
+			message: "Something went wrong",
+			error: error.message,
+		})
 	}
 })
 
-module.exports = router
+export default router
