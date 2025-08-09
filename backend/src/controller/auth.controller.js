@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import userModel from "../models/user.models.js"
+import userModel from "../model/user.model.js"
 import bcrypt from "bcrypt"
 
 export async function register(req, res) {
@@ -17,6 +17,7 @@ export async function register(req, res) {
 
 		const hashPassword = await bcrypt.hash(password, 10)
 
+		// save to mongo db
 		const user = await userModel.create({
 			username,
 			password: hashPassword,
@@ -40,7 +41,6 @@ export async function login(req, res) {
 	try {
 		const { username, password } = req.body
 
-		const hashPassword = bcrypt.hash(password)
 		const user = await userModel.findOne({ username })
 
 		if (!user) return res.status(400).json({ message: "user not found" })

@@ -1,4 +1,4 @@
-import userModel from "../models/user.models.js"
+import userModel from "../model/user.model.js"
 import jwt from "jsonwebtoken"
 
 async function authMiddleware(req, res, next) {

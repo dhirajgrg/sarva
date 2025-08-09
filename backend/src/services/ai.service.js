@@ -1,9 +1,10 @@
 import { GoogleGenAI } from "@google/genai"
+import dotenv from "dotenv"
+dotenv.config()
 
 const ai = new GoogleGenAI({
 	apiKey: process.env.GEMINI_API_KEY,
 })
-
 async function generateCaption(base64Image) {
 	const contents = [
 		{
@@ -12,17 +13,18 @@ async function generateCaption(base64Image) {
 				data: base64Image,
 			},
 		},
-		{ text: "Caption this image." },
+		{
+			text: "caption",
+		},
 	]
-
 	const response = await ai.models.generateContent({
 		model: "gemini-2.5-flash",
 		contents: contents,
 		config: {
 			systemInstruction:
-				"genarate catch vey short caption with emojis and hastags",
+				"genarate only one very short sentence caption with emojis and hastags",
 		},
 	})
-	console.log(response.text)
+		return response.text
 }
 export default generateCaption
