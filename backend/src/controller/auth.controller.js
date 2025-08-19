@@ -4,22 +4,23 @@ import bcrypt from "bcrypt"
 
 export async function register(req, res) {
 	try {
-		const { username, password } = req.body
+		const { email, password } = req.body
 
-		if (!username || !password)
+		if (!email || !password)
 			return res
 				.status(400)
-				.json({ message: "username or password not found" })
+				.json({ message: "email or password not found" })
 
-		const userExist = await userModel.findOne({ username })
+		const userExist = await userModel.findOne({ email })
+		
 		if (userExist)
-			return res.status(400).json({ message: "user already exist" })
+			return res.status(400).json({ message: "user already exists" })
 
 		const hashPassword = await bcrypt.hash(password, 10)
 
 		// save to mongo db
 		const user = await userModel.create({
-			username,
+			email,
 			password: hashPassword,
 		})
 		if (!user) return res.status(400).json({ message: "user not created" })
@@ -39,9 +40,9 @@ export async function register(req, res) {
 
 export async function login(req, res) {
 	try {
-		const { username, password } = req.body
+		const { email, password } = req.body
 
-		const user = await userModel.findOne({ username })
+		const user = await userModel.findOne({ email })
 
 		if (!user) return res.status(400).json({ message: "user not found" })
 

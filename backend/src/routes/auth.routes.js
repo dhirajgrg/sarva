@@ -8,6 +8,7 @@ const router = express.Router()
 const upload = multer({ storage: multer.memoryStorage() })
 
 router.post("/register", register)
-router.post("/login", login)
+router.post("/login",login)
 router.post("/ads", authMiddleware, upload.single("image"), createAds)
+router.get("/verify", authMiddleware, (req, res) => res.json(req.user))
 export default router

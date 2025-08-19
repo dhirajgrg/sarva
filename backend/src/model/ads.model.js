@@ -33,7 +33,7 @@ const adsSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "user",
 	},
-})
+},{timestamps: true	})
 
 const adsModel = mongoose.model("ads", adsSchema)
 export default adsModel

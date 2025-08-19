@@ -5,7 +5,7 @@ const Card = ({ category, subcategory }) => {
 		<div className="bg-white rounded-lg flex flex-col p-2 h-auto shadow-md ">
 			<div className="bg-zinc-400 h-40 rounded-lg w-full">
 				<img
-					src=""
+					src="#"
 					alt=""
 					className="w-full h-full object-cover rounded-lg"
 				/>

@@ -8,7 +8,7 @@ const Home = () => {
 		<div className="h-full w-full overflow-hidden">
 			<Nav />
 			<Hero />
-			<CardsContainer/>
+			<CardsContainer />
 		</div>
 	)
 }
