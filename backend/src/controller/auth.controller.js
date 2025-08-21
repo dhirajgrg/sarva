@@ -12,7 +12,7 @@ export async function register(req, res) {
 				.json({ message: "email or password not found" })
 
 		const userExist = await userModel.findOne({ email })
-		
+
 		if (userExist)
 			return res.status(400).json({ message: "user already exists" })
 
@@ -61,4 +61,13 @@ export async function login(req, res) {
 		console.error("something wrong", error.message)
 		res.status(400).json({ message: error.message })
 	}
+}
+export const logout = async (req, res) => {
+	// Clear the token cookie
+	await res.clearCookie("token")
+
+	res.status(200).json({
+		success: true,
+		message: "Logout successful",
+	})
 }

@@ -9,7 +9,7 @@ async function authMiddleware(req, res, next) {
 
 	const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY)
 
-	const user = await userModel.findOne({ _id: decoded.id })
+	const user = await userModel.findOne(decoded.id).select("-password")
 	if (!user) {
 		return res.status(401).json({ message: "unauthorized" })
 	}

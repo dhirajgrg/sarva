@@ -16,8 +16,8 @@ const CreateADS = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		console.log("Form submitted with images:", images)
-		// send images + other form data to backend
+
+		
 	}
 	const goBack = () => {
 		navigate(-1)

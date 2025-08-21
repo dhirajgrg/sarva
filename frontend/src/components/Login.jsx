@@ -1,12 +1,16 @@
 import React, { useState } from "react"
-import authAPI from "../services/authAPI"
 import { useNavigate, Link } from "react-router-dom"
 import { toast } from "react-toastify"
+import { useDispatch, useSelector } from "react-redux"
+import { LoginUser } from "../features/authSlice"
 const Login = () => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [error, setError] = useState("")
 	const navigate = useNavigate()
+	const dispatch = useDispatch()
+	const { user } = useSelector((state) => state.auth)
+
 	const goBack = () => {
 		navigate("/")
 	}
@@ -16,20 +20,21 @@ const Login = () => {
 		setError("") // reset previous error
 
 		try {
-			const user = { email, password }
+			// Dispatch the async thunk and wait for completion
+			const resultAction = await dispatch(LoginUser({ email, password }))
 
-			await authAPI.post(`/api/login`, user)
-
-			toast.success("User login successfully!")
-			setEmail("")
-			setPassword("")
-			navigate("/")
-		} catch (err) {
-			// Axios error object uses `response`
-			if (err.response && err.response.data) {
-				setError(err.response.data.message) // show backend error
+			if (LoginUser.fulfilled.match(resultAction)) {
+				toast.success("User logged in successfully!")
+				navigate("/")
 			} else {
-				setError("Network error. Please try again.")
+				// If rejected, show error message
+				setError(resultAction.payload?.message || "Login failed")
+			}
+		} catch (err) {
+			if (err.response && err.response.data) {
+				setError(err.response.data.message)
+			} else {
+				setError("Something went wrong")
 			}
 		}
 	}
@@ -43,7 +48,7 @@ const Login = () => {
 					&larr;{" "}
 				</div>
 				<h1 className="text-2xl font-bold mb-6 text-center ">Login</h1>
-				<form onSubmit={handleSubmit} className="flex flex-col gap-4">
+				<form onSubmit={handleSubmit} autoComplete="off" className="flex flex-col gap-4">
 					<input
 						type="email"
 						name="email"

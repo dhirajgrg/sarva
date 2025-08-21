@@ -14,6 +14,6 @@ app.use(
 )
 app.use(cookie())
 
-app.use("/api", authRoutes)
+app.use("/api/v1/auth", authRoutes)
 
 export default app
