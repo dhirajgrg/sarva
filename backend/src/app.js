@@ -6,7 +6,19 @@ import cookie from "cookie-parser"
 import express from "express"
 import authRoutes from "./routes/auth.routes.js"
 import adsRoutes from "./routes/ads.routes.js"
+import qs from "qs"
+
 const app = express()
+
+
+
+app.use((req, res, next) => {
+	// parse nested query into a separate object
+	req.parsedQuery = qs.parse(req.originalUrl.split("?")[1] || "")
+	next()
+})
+
+
 app.use(morgan("dev"))
 app.use(express.json())
 app.use(

@@ -1,6 +1,7 @@
 import adsModel from "../model/ads.model.js"
 import generateCaption from "../services/ai.service.js"
 import uploadImage from "../services/storage.service.js"
+import apiFeatures from "../utils/apiFeatures.js"
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
@@ -63,55 +64,25 @@ export async function createAds(req, res) {
 // get all ads
 export async function getAllAds(req, res) {
 	try {
-		console.log(req.query)
-		const { search, description, minPrice, maxPrice, location, category } =
-			req.query
-
-		let filter = {}
-		if (search) {
-			const searchArray = search.split(",").map((el) => el.trim())
-			filter.$or = searchArray.flatMap((el) => [
-				{ title: { $regex: el, $options: "i" } },
-				{ description: { $regex: el, $options: "i" } },
-			])
-		}
-		if (description) {
-			filter.description = description
-		}
-		if (minPrice || maxPrice) {
-			filter.price = {}
-			if (minPrice) {
-				filter.price.$gte = Number(minPrice)
-			}
-			if (maxPrice) {
-				filter.price.$lte = Number(maxPrice)
-			}
-		}
-		if (location) {
-			const locationArray = location
-				.split(",")
-				.map((el) => new RegExp(el, "i"))
-			filter.location = { $in: locationArray }
-		}
-		if (category) {
-			filter.category = category
-		}
-
-		const ads = await adsModel
-			.find(filter)
-			.select("-createdAt -updatedAt -__v")
+		// features
+		const features = new apiFeatures(adsModel.find(), req.parsedQuery)
+			.filter()
+			.sort()
+			.limitFields()
+			.paginate()
+		// execute query
+		const adsData = await features.query
+		console.log(adsData)
 
 		res.status(200).json({
 			status: "success",
-			results: ads.length,
-			data: {
-				ads,
-			},
+			result: adsData.length,
+			data: adsData,
 		})
 	} catch (error) {
 		res.status(400).json({
 			status: "fail",
-			message: error,
+			message: error.message,
 		})
 	}
 }

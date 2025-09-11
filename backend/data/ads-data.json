@@ -1,803 +1,92 @@
-
 [
-    {
-        "title": "Wireless Keyboard",
-        "description": "Compact and easy to carry.",
-        "price": 4319.62,
-        "location": "Phoenix",
-        "category": "Fashion",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Sony WH-1000XM5 Headphones",
-        "description": "Comes with accessories included.",
-        "price": 392.41,
-        "location": "San Francisco",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Office Chair",
-        "description": "High-quality sound and comfort.",
-        "price": 4683.44,
-        "location": "Portland",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Brand new in box with warranty.",
-        "price": 1996.63,
-        "location": "Detroit",
-        "category": "Shoes",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Air Conditioner",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 2227.64,
-        "location": "Philadelphia",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "4K Smart TV",
-        "description": "Imported and original product.",
-        "price": 2213.05,
-        "location": "Los Angeles",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Refrigerator",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 689.71,
-        "location": "Houston",
-        "category": "Fashion",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Brand new in box with warranty.",
-        "price": 4500.36,
-        "location": "Orlando",
-        "category": "Shoes",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Running Shoes",
-        "description": "Energy-efficient and sharp display.",
-        "price": 2285.1,
-        "location": "Las Vegas",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Energy-efficient and sharp display.",
-        "price": 4918.44,
-        "location": "Dallas",
-        "category": "Kitchen",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Dining Table",
-        "description": "High-quality sound and comfort.",
-        "price": 3992.8,
-        "location": "Dallas",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Gaming Laptop RTX 4070",
-        "description": "Latest model with upgraded features.",
-        "price": 3943.13,
-        "location": "Denver",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Compact and easy to carry.",
-        "price": 2220.93,
-        "location": "Austin",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Special discount available.",
-        "price": 256.98,
-        "location": "San Jose",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Gaming Laptop RTX 4070",
-        "description": "High-quality sound and comfort.",
-        "price": 979.59,
-        "location": "San Jose",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Perfect for photography enthusiasts.",
-        "price": 3057.19,
-        "location": "New York",
-        "category": "Health",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Wireless Keyboard",
-        "description": "Selling for urgent cash.",
-        "price": 4839.22,
-        "location": "Seattle",
-        "category": "Shoes",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Running Shoes",
-        "description": "Affordable yet premium quality.",
-        "price": 3182.45,
-        "location": "Detroit",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Office Chair",
-        "description": "Best in the market right now.",
-        "price": 2690.69,
-        "location": "Philadelphia",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Brand new in box with warranty.",
-        "price": 4188.1,
-        "location": "Phoenix",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Trendy design and long-lasting.",
-        "price": 1475.74,
-        "location": "San Francisco",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Electric Scooter",
-        "description": "Comes with accessories included.",
-        "price": 4619.06,
-        "location": "Austin",
-        "category": "Shoes",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Affordable yet premium quality.",
-        "price": 791.35,
-        "location": "San Diego",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Imported and original product.",
-        "price": 345.72,
-        "location": "San Diego",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Xbox Series X",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 1633.22,
-        "location": "Dallas",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Wireless Keyboard",
-        "description": "High-quality sound and comfort.",
-        "price": 4317.85,
-        "location": "Atlanta",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Microwave Oven",
-        "description": "Energy-efficient and sharp display.",
-        "price": 1034.46,
-        "location": "Orlando",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Mountain Bike",
-        "description": "Powerful device for multitasking.",
-        "price": 417.23,
-        "location": "Seattle",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Drone DJI Mini 3",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 1035.64,
-        "location": "Seattle",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Wireless Keyboard",
-        "description": "Perfect for photography enthusiasts.",
-        "price": 2164.75,
-        "location": "Denver",
-        "category": "Kitchen",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Office Chair",
-        "description": "Perfect for photography enthusiasts.",
-        "price": 1032.0,
-        "location": "San Jose",
-        "category": "Sports",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Latest model with upgraded features.",
-        "price": 4882.32,
-        "location": "Boston",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Drone DJI Mini 3",
-        "description": "Latest model with upgraded features.",
-        "price": 316.62,
-        "location": "Charlotte",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "4K Smart TV",
-        "description": "Powerful device for multitasking.",
-        "price": 151.98,
-        "location": "Denver",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Drone DJI Mini 3",
-        "description": "High-quality sound and comfort.",
-        "price": 473.61,
-        "location": "Phoenix",
-        "category": "Kitchen",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Brand new in box with warranty.",
-        "price": 1431.52,
-        "location": "San Francisco",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Mountain Bike",
-        "description": "Compact and easy to carry.",
-        "price": 826.32,
-        "location": "Boston",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Latest model with upgraded features.",
-        "price": 579.05,
-        "location": "Phoenix",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Powerful device for multitasking.",
-        "price": 4699.98,
-        "location": "San Francisco",
-        "category": "Sports",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Electric Scooter",
-        "description": "Best in the market right now.",
-        "price": 3768.62,
-        "location": "Chicago",
-        "category": "Sports",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "iPhone 14 Pro Max",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 2355.03,
-        "location": "Atlanta",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Office Chair",
-        "description": "Affordable yet premium quality.",
-        "price": 4259.67,
-        "location": "New York",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Limited stock available.",
-        "price": 3749.81,
-        "location": "New York",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Refrigerator",
-        "description": "Limited stock available.",
-        "price": 2881.55,
-        "location": "Charlotte",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Office Chair",
-        "description": "Powerful device for multitasking.",
-        "price": 2208.12,
-        "location": "Chicago",
-        "category": "Fashion",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Selling for urgent cash.",
-        "price": 1939.94,
-        "location": "Chicago",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Durable and stylish, great performance.",
-        "price": 2201.14,
-        "location": "Orlando",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Running Shoes",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 949.75,
-        "location": "Dallas",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Xbox Series X",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 3179.4,
-        "location": "Los Angeles",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Rarely used, looks like new.",
-        "price": 4748.34,
-        "location": "Seattle",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Rarely used, looks like new.",
-        "price": 4218.81,
-        "location": "Orlando",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Gaming Laptop RTX 4070",
-        "description": "Latest model with upgraded features.",
-        "price": 817.92,
-        "location": "New York",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Affordable yet premium quality.",
-        "price": 4663.88,
-        "location": "New York",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 936.14,
-        "location": "Philadelphia",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Samsung Galaxy S23",
-        "description": "Imported and original product.",
-        "price": 3234.2,
-        "location": "Portland",
-        "category": "Health",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Air Conditioner",
-        "description": "Selling for urgent cash.",
-        "price": 4814.93,
-        "location": "Seattle",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Best in the market right now.",
-        "price": 1984.82,
-        "location": "Miami",
-        "category": "Health",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Smartwatch Series 9",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 321.7,
-        "location": "San Jose",
-        "category": "Kitchen",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Energy-efficient and sharp display.",
-        "price": 3189.3,
-        "location": "Detroit",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Limited stock available.",
-        "price": 4593.97,
-        "location": "Atlanta",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Smartwatch Series 9",
-        "description": "Brand new in box with warranty.",
-        "price": 4700.66,
-        "location": "Denver",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Imported and original product.",
-        "price": 121.6,
-        "location": "Los Angeles",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Affordable yet premium quality.",
-        "price": 4589.99,
-        "location": "Portland",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Xbox Series X",
-        "description": "Trendy design and long-lasting.",
-        "price": 656.91,
-        "location": "New York",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Best in the market right now.",
-        "price": 4204.55,
-        "location": "San Jose",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Mountain Bike",
-        "description": "Powerful device for multitasking.",
-        "price": 489.81,
-        "location": "Phoenix",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Dining Table",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 944.17,
-        "location": "Austin",
-        "category": "Health",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Drone DJI Mini 3",
-        "description": "Energy-efficient and sharp display.",
-        "price": 1204.4,
-        "location": "Houston",
-        "category": "Health",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Mountain Bike",
-        "description": "Special discount available.",
-        "price": 4055.49,
-        "location": "Miami",
-        "category": "Fashion",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Samsung Galaxy S23",
-        "description": "Selling for urgent cash.",
-        "price": 4306.91,
-        "location": "Las Vegas",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Energy-efficient and sharp display.",
-        "price": 1982.16,
-        "location": "Miami",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Xbox Series X",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 2255.42,
-        "location": "Orlando",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Office Chair",
-        "description": "Affordable yet premium quality.",
-        "price": 3181.77,
-        "location": "Orlando",
-        "category": "Furniture",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "MacBook Air M2",
-        "description": "Best in the market right now.",
-        "price": 257.61,
-        "location": "Miami",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Special discount available.",
-        "price": 3612.17,
-        "location": "Charlotte",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Kitchen Blender",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 3524.79,
-        "location": "Dallas",
-        "category": "Fashion",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Nike Air Jordan Shoes",
-        "description": "Best in the market right now.",
-        "price": 448.58,
-        "location": "San Francisco",
-        "category": "Computers",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Smartwatch Series 9",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 4175.95,
-        "location": "San Francisco",
-        "category": "Sports",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Dining Table",
-        "description": "Selling for urgent cash.",
-        "price": 856.98,
-        "location": "Orlando",
-        "category": "Sports",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Sony WH-1000XM5 Headphones",
-        "description": "Energy-efficient and sharp display.",
-        "price": 4045.31,
-        "location": "Atlanta",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Office Chair",
-        "description": "High-quality sound and comfort.",
-        "price": 352.3,
-        "location": "Orlando",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Used for 6 months, excellent condition.",
-        "price": 828.35,
-        "location": "Los Angeles",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Leather Sofa",
-        "description": "Perfect for students and professionals.",
-        "price": 4613.67,
-        "location": "Austin",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "iPhone 14 Pro Max",
-        "description": "Rarely used, looks like new.",
-        "price": 1420.93,
-        "location": "Detroit",
-        "category": "Electronics",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "GoPro Hero 11",
-        "description": "Energy-efficient and sharp display.",
-        "price": 1716.57,
-        "location": "Austin",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1549921296-3a8352d0a3c5"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Energy-efficient and sharp display.",
-        "price": 460.61,
-        "location": "Austin",
-        "category": "Shoes",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
-    },
-    {
-        "title": "Mechanical Gaming Keyboard",
-        "description": "Best in the market right now.",
-        "price": 2374.49,
-        "location": "Dallas",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Air Conditioner",
-        "description": "Perfect for photography enthusiasts.",
-        "price": 4490.1,
-        "location": "Portland",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Lightweight and powerful for daily use.",
-        "price": 3273.89,
-        "location": "Charlotte",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5"
-    },
-    {
-        "title": "Wireless Keyboard",
-        "description": "Perfect for photography enthusiasts.",
-        "price": 431.59,
-        "location": "San Francisco",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Imported and original product.",
-        "price": 642.34,
-        "location": "Dallas",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Sony WH-1000XM5 Headphones",
-        "description": "Special discount available.",
-        "price": 3428.73,
-        "location": "Portland",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Gaming Laptop RTX 4070",
-        "description": "High-quality sound and comfort.",
-        "price": 3452.74,
-        "location": "New York",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Running Shoes",
-        "description": "Special discount available.",
-        "price": 2337.09,
-        "location": "Portland",
-        "category": "Gaming",
-        "image": "https://images.unsplash.com/photo-1596464716121-7b14e4f2b4db"
-    },
-    {
-        "title": "Microwave Oven",
-        "description": "Powerful device for multitasking.",
-        "price": 3721.27,
-        "location": "San Diego",
-        "category": "Cameras",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Dining Table",
-        "description": "Special discount available.",
-        "price": 3594.68,
-        "location": "Detroit",
-        "category": "Mobiles",
-        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
-    },
-    {
-        "title": "Nike Air Jordan Shoes",
-        "description": "Special discount available.",
-        "price": 1097.33,
-        "location": "Phoenix",
-        "category": "Home Appliances",
-        "image": "https://images.unsplash.com/photo-1588613256603-ecf3b1b9a4d4"
-    },
-    {
-        "title": "Canon EOS R5 Camera",
-        "description": "Powerful device for multitasking.",
-        "price": 1106.1,
-        "location": "San Francisco",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1603898037225-3d54e8b6f9f9"
-    },
-    {
-        "title": "Microwave Oven",
-        "description": "Imported and original product.",
-        "price": 3041.32,
-        "location": "Atlanta",
-        "category": "Outdoor",
-        "image": "https://images.unsplash.com/photo-1606813902794-0b9e8c5f6f0c"
-    },
-    {
-        "title": "Microwave Oven",
-        "description": "Rarely used, looks like new.",
-        "price": 77.44,
-        "location": "Dallas",
-        "category": "Accessories",
-        "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
-    }
+	{
+		"title": "iPhone 14 Pro",
+		"description": "Slightly used iPhone 14 Pro, 128GB, space black color.",
+		"price": 95000,
+		"location": "Mumbai",
+		"category": "Electronics",
+		"image": "https://ik.imagekit.io/demo/iphone14pro.jpg",
+		"caption": "Almost brand new"
+	},
+	{
+		"title": "Wooden Dining Table",
+		"description": "6-seater solid Sheesham wood dining table in good condition.",
+		"price": 18000,
+		"location": "Bangalore",
+		"category": "Furniture",
+		"image": "https://ik.imagekit.io/demo/diningtable.jpg",
+		"caption": "Great for family dinners"
+	},
+	{
+		"title": "Mountain Bicycle",
+		"description": "Lightweight mountain bike, 21 gear, barely used.",
+		"price": 12000,
+		"location": "Pune",
+		"category": "Sports",
+		"image": "https://ik.imagekit.io/demo/mountainbike.jpg",
+		"caption": "Perfect for weekend rides"
+	},
+	{
+		"title": "Sony WH-1000XM5 Headphones",
+		"description": "Noise cancelling over-ear headphones, used for 2 months.",
+		"price": 25000,
+		"location": "Delhi",
+		"category": "Electronics",
+		"image": "https://ik.imagekit.io/demo/sonyheadphones.jpg",
+		"caption": "Excellent sound quality"
+	},
+	{
+		"title": "Gaming Chair",
+		"description": "Ergonomic gaming chair with adjustable armrests and lumbar support.",
+		"price": 9000,
+		"location": "Hyderabad",
+		"category": "Furniture",
+		"image": "https://ik.imagekit.io/demo/gamingchair.jpg",
+		"caption": "Very comfortable"
+	},
+	{
+		"title": "Canon EOS 1500D",
+		"description": "DSLR camera with 18-55mm lens, includes camera bag.",
+		"price": 28000,
+		"location": "Kolkata",
+		"category": "Electronics",
+		"image": "https://ik.imagekit.io/demo/canon1500d.jpg",
+		"caption": "Capture your moments"
+	},
+	{
+		"title": "Adidas Running Shoes",
+		"description": "Men's size 9 Adidas running shoes, barely used.",
+		"price": 3000,
+		"location": "Ahmedabad",
+		"category": "Fashion",
+		"image": "https://ik.imagekit.io/demo/adidasshoes.jpg",
+		"caption": "Lightweight and comfy"
+	},
+	{
+		"title": "Office Laptop Table",
+		"description": "Compact foldable laptop table, ideal for home office.",
+		"price": 2500,
+		"location": "Chennai",
+		"category": "Furniture",
+		"image": "https://ik.imagekit.io/demo/laptoptable.jpg",
+		"caption": "Space saving design"
+	},
+	{
+		"title": "MacBook Air M2",
+		"description": "MacBook Air M2 13-inch, 256GB, silver color, almost new.",
+		"price": 98000,
+		"location": "Jaipur",
+		"category": "Electronics",
+		"image": "https://ik.imagekit.io/demo/macbookairm2.jpg",
+		"caption": "Super fast performance"
+	},
+	{
+		"title": "Samsung 43-inch Smart TV",
+		"description": "Full HD Smart LED TV, 43-inch, wall mount included.",
+		"price": 32000,
+		"location": "Lucknow",
+		"category": "Electronics",
+		"image": "https://ik.imagekit.io/demo/samsungsmarttv.jpg",
+		"caption": "Great picture quality"
+	}
 ]
