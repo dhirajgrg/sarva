@@ -3,10 +3,26 @@ class apiFeatures {
 		this.query = query
 		this.queryString = queryString
 	}
+	search() {
+		if (this.queryString.search) {
+			const keyword = this.queryString.search
+
+			// 🔍 Search across multiple string fields
+			this.query = this.query.find({
+				$or: [
+					{ title: { $regex: keyword, $options: "i" } },
+					{ description: { $regex: keyword, $options: "i" } },
+					{ category: { $regex: keyword, $options: "i" } },
+					{ location: { $regex: keyword, $options: "i" } },
+				],
+			})
+		}
+		return this
+	}
 
 	filter() {
 		const queryObj = { ...this.queryString }
-		const excludedFields = ["page", "sort", "limit", "fields"]
+		const excludedFields = ["search", "page", "sort", "limit", "fields"]
 		excludedFields.forEach((el) => delete queryObj[el])
 
 		// 1B) Advanced filtering
@@ -15,8 +31,8 @@ class apiFeatures {
 			/\b(gte|gt|lte|lt)\b/g,
 			(match) => `$${match}`
 		)
-		console.log(queryStr)
-		this.query = this.query.find(JSON.parse(queryStr)).select("-__v -createdAt -updatedAt")
+
+		this.query = this.query.find(JSON.parse(queryStr))
 
 		return this
 	}
@@ -41,10 +57,16 @@ class apiFeatures {
 		return this
 	}
 
-	paginate() {
+	async paginate() {
 		const page = this.queryString.page * 1 || 1
 		const limit = this.queryString.limit * 1 || 10
 		const skip = (page - 1) * limit
+
+		const numDocs = await this.query.clone().countDocuments()
+		if (skip >= numDocs && numDocs > 0) {
+			throw new Error("This page does not exist")
+		}
+
 		this.query = this.query.skip(skip).limit(limit)
 		return this
 	}

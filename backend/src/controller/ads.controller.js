@@ -65,13 +65,15 @@ export async function createAds(req, res) {
 export async function getAllAds(req, res) {
 	try {
 		// features
-		const features = new apiFeatures(adsModel.find(), req.parsedQuery)
+		const features = new apiFeatures(adsModel.find(), req.query)
+			.search()
 			.filter()
 			.sort()
 			.limitFields()
-			.paginate()
+
+		await features.paginate()
 		// execute query
-		const adsData = await features.query
+		const adsData = await features.query.clone()
 		console.log(adsData)
 
 		res.status(200).json({
