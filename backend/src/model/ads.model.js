@@ -24,7 +24,7 @@ const adsSchema = new mongoose.Schema(
 		},
 		image: {
 			type: String,
-			required: true,
+			default: "",
 		},
 		caption: {
 			type: String,
