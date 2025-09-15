@@ -1,5 +1,7 @@
 import express from "express"
 // import multer from "multer"
+import authMiddleWare from "../middleware/auth.middleware.js"
+
 import {
 	getAllAds,
 	createAds,
@@ -14,9 +16,12 @@ const router = express.Router()
 // const upload = multer({ storage: multer.memoryStorage() })
 // import data
 router.route("/import").post(importData)
-// ads
-router.route("/").get(getAllAds).post(createAds)
-// single ads
-router.route("/:id").get(getOneAds).put(updateAds).delete(deleteAds)
+// public routes
+router.get("/", getAllAds)
+router.get("/:id", getOneAds)
+// private routes
+router.use(authMiddleWare)
+router.post("/", createAds)
+router.route("/:id").put(updateAds).delete(deleteAds)
 
 export default router
