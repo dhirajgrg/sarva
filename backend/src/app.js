@@ -4,10 +4,9 @@ import morgan from "morgan"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import express from "express"
-import authRoutes from "./routes/auth.routes.js"
 import adsRoutes from "./routes/ads.routes.js"
 import AppError from "./utils/appError.js"
-import { errorHandle } from "./controller/error.controller.js"
+import globalErrorHandler from "./controller/error.controller.js"
 
 const app = express()
 // query parser
@@ -24,14 +23,12 @@ app.use(
 	})
 )
 app.use(cookieParser())
-
-app.use("/api/v1/auth", authRoutes)
 app.use("/api/v1/ads", adsRoutes)
 
 app.all("*", (req, res, next) => {
 	next(new AppError(`can't find ${req.originalUrl} on this server`, 404))
 })
 
-app.use(errorHandle)
+app.use(globalErrorHandler)
 
 export default app

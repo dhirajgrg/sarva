@@ -6,6 +6,7 @@ import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import catchAsync from "../../src/utils/catchAsync.js"
+import AppError from "../utils/appError.js"
 // Recreate __dirname in ESM
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -76,6 +77,9 @@ export const getAllAds = catchAsync(async (req, res, next) => {
 
 export const getOneAds = catchAsync(async (req, res, next) => {
 	const adsData = await adsModel.findById(req.params.id)
+	if (!adsData) {
+		return next(new AppError("Ads not found with that ID", 404))
+	}
 	res.status(200).json({
 		status: "success",
 		data: adsData,
@@ -86,6 +90,14 @@ export const updateAds = catchAsync(async (req, res, next) => {
 	const adsData = await adsModel.findByIdAndUpdate(req.params.id, req.body, {
 		new: true,
 	})
+	if (!adsData) {
+		return next(new AppError("Ads not found with that ID", 404))
+	}
+
+	res.status(200).json({
+		status: "success",
+		data: adsData,
+	})
 })
 
 export const deleteAds = catchAsync(async (req, res, next) => {
@@ -93,5 +105,12 @@ export const deleteAds = catchAsync(async (req, res, next) => {
 	res.status(200).json({
 		status: "success",
 		data: adsData,
+	})
+	if (!adsData) {
+		return next(new AppError("Ads not found with that ID", 404))
+	}
+	res.status(204).json({
+		status: "success",
+		data: null,
 	})
 })
